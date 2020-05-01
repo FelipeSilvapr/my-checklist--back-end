@@ -1,9 +1,10 @@
 const express = require('express');
 
-const application = express();
+const dbConnection = require('./settings/db-connection');
 
-application.get('/', (_request, response) => {
-  response.send('ok');
-});
+dbConnection.on('error', console.error.bind(console, 'connection error: '));
+dbConnection.once('open', () => console.log('successfully connected'));
+
+const application = express();
 
 application.listen(8000 || process.env.EXPRESS_LISTEN_PORT);
