@@ -4,7 +4,7 @@
   "description": "my-checklist application's back-end",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.js",
+    "start": "nodemon --require dotenv/config src/index.js",
     "test": "mocha"
   },
   "repository": {
@@ -42,7 +42,14 @@
     }
   },
   "lint-staged": {
-    "src/**/*.js": ["eslint --cache --fix"],
-    "src/**/*.spec.js": ["mocha"]
+    "src/**/*.js": [
+      "eslint --cache --fix"
+    ],
+    "src/**/*.spec.js": [
+      "mocha"
+    ]
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0"
   }
 }
