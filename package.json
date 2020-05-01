@@ -42,9 +42,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.js": [
-      "eslint --cache --fix",
-      "mocha"
-    ]
+    "src/**/*.js": ["eslint --cache --fix"],
+    "src/**/*.spec.js": ["mocha"]
   }
 }
