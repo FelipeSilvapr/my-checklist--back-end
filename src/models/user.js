@@ -9,7 +9,7 @@ const userSchema = new Schema({
     type: String,
     required: [true, 'necessary field'],
     validate: {
-      validator: (userInput) => !validator.isEmail(userInput),
+      validator: (userInput) => validator.isEmail(userInput),
       message: (prop) => `${prop} is not a valid e-mail`,
     },
   },
