@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --require dotenv/config src/index.js",
-    "test": "mocha"
+    "test": "mocha src/**/*.spec.js"
   },
   "repository": {
     "type": "git",
