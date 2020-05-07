@@ -9,7 +9,7 @@ const userSchema = new Schema({
     type: String,
     required: [true, 'necessary field'],
     validate: {
-      validator: (userInput) => !validator.isEmail(userInput),
+      validator: (userInput) => validator.isEmail(userInput),
       message: (prop) => `${prop} is not a valid e-mail`,
     },
   },
@@ -18,10 +18,8 @@ const userSchema = new Schema({
 
 // eslint-disable-next-line func-names
 userSchema.methods.verifyPassword = function (password) {
-  bcrypt.compare(password, this.hash, (error, result) => {
-    if (error) return error;
-    return result;
-  });
+  const result = bcrypt.compareSync(password, this.hash);
+  return result;
 };
 
 const user = model('User', userSchema);
