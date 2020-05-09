@@ -9,7 +9,9 @@ If you want to contribute to the project, follow the steps:
 5. Then add the `upstream` to the repo's remote with the command: `git remote add upstream https://github.com/my-checklist/https://github.com/my-checklist/my-checklist--back-end`
 6. Now go to the repository's README https://github.com/my-checklist/my-checklist--back-end/blob/master/README.md#running-the-project-in-your-local-enviroment and learn how to run the project;
 
-Doing that you're all good to go. Before start the work do not forget to run `git pull upstream master`, so you're always up to date with the repo. Make all the changes/fixes you think it's necessary and then submit a new pull request. Give it a good description. 
+Doing that you're all good to go. Before start the work do not forget to run `git pull upstream master`, so you're always up to date with the repo.
+**Important**: always create a new branch to work.
+Make all the changes/fixes you think it's necessary and then submit a new pull request. Give it a good description. 
 
 ### IMPORTANT! 
 
